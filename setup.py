@@ -4,18 +4,18 @@ with open("README.md", "r", encoding = "utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name='ai-code-fixer',
-    version='0.0.1',
+    name='jucodecorrector',
+    version='0.0.8',
     author='Isaac Duong',
     author_email='isaaacduong@gmail.com',
     license='MIT',    
-    url='https://github.com/isaacduong/ai-code-fixer.git',
+    url='https://github.com/isaacduong/jucodecorrector.git',
     description=("Python script to rivise error code " 
                  "based on the error messages " 
                  "using ChatGPT."),
     long_description=long_description,
     long_description_content_type="text/markdown",
-    packages=['ai-code-fixer'],
+    #packages=['jucodecorrector'],
     install_requires=[   
             'ipywidgets==8.0.6',
             'black==23.3.0',
