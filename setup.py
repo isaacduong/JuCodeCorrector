@@ -5,17 +5,17 @@ with open("README.md", "r", encoding = "utf-8") as fh:
 
 setup(
     name='jucodecorrector',
-    version='0.0.8',
+    version='0.1.0',
     author='Isaac Duong',
     author_email='isaaacduong@gmail.com',
     license='MIT',    
-    url='https://github.com/isaacduong/jucodecorrector.git',
+    url='https://github.com/isaacduong/JuCodeCorrector.git',
     description=("Python script to rivise error code " 
                  "based on the error messages " 
                  "using ChatGPT."),
     long_description=long_description,
     long_description_content_type="text/markdown",
-    #packages=['jucodecorrector'],
+    packages=['jucodecorrector'],
     install_requires=[   
             'ipywidgets==8.0.6',
             'black==23.3.0',
