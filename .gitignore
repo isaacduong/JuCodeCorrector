@@ -1,2 +1,6 @@
 .ipynb_checkpoints/code_fixer-checkpoint.ipynb
 .DS_Store
+.vscode
+__pycache__
+.ipynb_checkpoints/Dockerfile-checkpoint .ipynb_checkpoints/README-checkpoint.md .ipynb_checkpoints/code_fixer_assistent-checkpoint.py .ipynb_checkpoints/requirements-checkpoint.txt .ipynb_checkpoints/setup-checkpoint.py .ipynb_checkpoints/test-checkpoint.ipynb
+.ipynb_checkpoints/
