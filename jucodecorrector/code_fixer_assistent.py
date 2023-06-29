@@ -1,21 +1,20 @@
 
+import inspect
+import os
 import re
 import time
-import openai
-import os
-import inspect
-import pyperclip
-import pyautogui
-from colored import fg, attr
+
 import black
 import ipywidgets as widgets
-
-from IPython.display import display  
+import openai
+import pyautogui
+import pyperclip
+from colored import attr, fg
 from IPython import get_ipython
-
+from IPython.display import display
 from pygments import highlight
-from pygments.lexers import PythonLexer
 from pygments.formatters import TerminalFormatter
+from pygments.lexers import PythonLexer
 
 
 class AiCodeCorrector:
@@ -85,7 +84,6 @@ class AiCodeCorrector:
 
         return formatted_definition
 
-
     def copy_to_clipboard(self):
         # try to copy the last error message in the Err dict to the clipboard
         try:
@@ -123,7 +121,7 @@ class AiCodeCorrector:
         return self._extract_function_name(extracted_text)
 
 
-    def _split_string_last_cell_in(self,input_string):
+    def _split_string_last_cell_in(self, input_string):
         # Find the last instance of "Cell In" in the string
         index = input_string.rfind("Cell In")
         if index != -1:
@@ -225,8 +223,7 @@ class AiCodeCorrector:
                     presence_penalty=0.8,
                     stop=["###"]
                     )    
-            return response['choices'][0]['text']
-
+            return response['choices'][0]['text'] # type: ignore
 
     def revise_code(self,explanation):
         """ This code checks to see if the explanation is valid and extracts the revised code from it.
@@ -251,11 +248,11 @@ class AiCodeCorrector:
         
         return ""  # Return an empty string if no revised code is available
 
-
     def fix_broken_code(self,explanation = True):
         """ This code will get the error produced by the last line of code and then attempt to fix it."""
         if not self.Err:
-            self.Err = get_ipython().user_ns.get('Err')
+            self.Err = get_ipython().user_ns.get('Err') # type: ignore
+            
             
         # Get the error and return an explanation
         explained_error = self.explain_error()
@@ -286,7 +283,6 @@ class AiCodeCorrector:
         else:
             pass
     
-        
 def _display_button(func_apply,func_try,snippets_index):
     
     # Create a button widget

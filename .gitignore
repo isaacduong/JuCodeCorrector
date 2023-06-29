@@ -4,3 +4,6 @@
 __pycache__
 .ipynb_checkpoints/Dockerfile-checkpoint .ipynb_checkpoints/README-checkpoint.md .ipynb_checkpoints/code_fixer_assistent-checkpoint.py .ipynb_checkpoints/requirements-checkpoint.txt .ipynb_checkpoints/setup-checkpoint.py .ipynb_checkpoints/test-checkpoint.ipynb
 .ipynb_checkpoints/
+build/
+dist
+jucodecorrector.egg-info
